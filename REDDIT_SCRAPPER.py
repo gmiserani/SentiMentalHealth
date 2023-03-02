@@ -10,7 +10,7 @@ if "data" not in os.listdir():
 assert "src" in os.listdir() 
 
 for subreddit in SUBREDDITS:
-    command = f"python3 scraper.py --subreddit {subreddit}"
+    command = f"python scraper.py --subreddit {subreddit}"
     print(command)
     proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     while proc.poll() is None:
